@@ -40,6 +40,6 @@ def test_fibonacci_iterative(fibo_payload) -> None:
 
     for test_data in fibo_payload:
         n = int(test_data['in']['N'])
-        if n > 100000:
+        if n > 10000:
             break
         assert fibonacci_iterative(n=n) == int(test_data['out'])
