@@ -1,3 +1,5 @@
+![Build Status](https://github.com/VVStanley/algorythm_2022_hw/actions/workflows/run_test_dz3.yaml/badge.svg?branch=master)
+
 # Домашнее задание №3
 
 ### Степень, Числа Фибоначчи, Простые числа
