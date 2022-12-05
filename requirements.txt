@@ -7,3 +7,5 @@ flake8-import-order
 pep8-naming
 mypy
 pytest-cov
+XlsxWriter
+pandas

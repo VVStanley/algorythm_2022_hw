@@ -1,11 +1,14 @@
 import math
 
+from utils.decorators import CSVOutput
 
-def exponentiation_multiplication(number: float, power: int) -> float:
+
+@CSVOutput(folder='dz3_fibonacci')
+def exponentiation_multiplication(n: float, power: int) -> float:
     """Алгоритм возведения в степень через домножение
     31 -> 16,8,4,2,1
 
-    Сложность  O(N/2+LogN) = O(N)
+    Сложность O(N/2+LogN)
     """
 
     result = 1
@@ -18,19 +21,20 @@ def exponentiation_multiplication(number: float, power: int) -> float:
         tres.append(res)
         power -= res
         p.append(power)
-        result *= number ** res
+        result *= n ** res
 
     return result
 
 
-def exponentiation_exponent(number: float, power: int) -> float:
+@CSVOutput(folder='dz3_fibonacci')
+def exponentiation_exponent(n: float, power: int) -> float:
     """Алгоритм возведения в степень
     через двоичное разложение показателя степени
 
-    Сложность   O(2LogN) = O(LogN)
+    Сложность O(2LogN)
     """
-    d = number
-    p = 1
+    d = n
+    p = d if power % 2 > 0 else 1
 
     while power >= 1:
         power = power // 2
