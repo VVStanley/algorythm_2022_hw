@@ -1,6 +1,6 @@
 from typing import List
 
-from dz3_fibonacci.middle.exceptions import MultiplyException
+from utils.exceptions import MultiplyException
 
 
 class Array:

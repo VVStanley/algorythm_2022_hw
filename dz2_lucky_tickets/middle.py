@@ -1,5 +1,6 @@
 """Счастливые билеты. MIDDLE"""
 import abc
+from typing import Optional
 
 
 class CalcLuckyTicket(abc.ABC):
@@ -12,9 +13,10 @@ class CalcLuckyTicket(abc.ABC):
         self.n = n
         self.counter = 0  # Кол-во счастливых билетов
 
+    @abc.abstractmethod
     def solve(self) -> int:
         """Возвращаем кол-во счастливых билетов"""
-        raise NotImplemented
+        raise NotImplementedError
 
 
 class Algorithm(CalcLuckyTicket):
@@ -49,6 +51,6 @@ class Recursive(CalcLuckyTicket):
             for b in range(10):
                 self.recursive(self.n - 1, sum_a + a, sum_b + b)
 
-    def solve(self) -> int | None:
+    def solve(self) -> Optional[int]:
         self.recursive(self.n, 0, 0)
         return self.counter
