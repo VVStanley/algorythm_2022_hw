@@ -14,13 +14,11 @@ def exponentiation_multiplication(n: float, power: int) -> float:
     result = 1
 
     tres = []
-    p = []
 
     while power >= 1:
         res = 2 ** int(math.log2(power))
         tres.append(res)
         power -= res
-        p.append(power)
         result *= n ** res
 
     return result
