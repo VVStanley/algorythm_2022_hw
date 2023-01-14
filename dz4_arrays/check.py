@@ -23,14 +23,14 @@ def check_insert(array: ABCArray, n: int) -> None:
 @CSVOutput(folder='dz4_arrays')
 def check_remove(array: ABCArray, n: int) -> None:
     """Запускаем удаление элементов"""
-    for _ in range(n):
-        array.remove(index=randint(0, array.size() - 1))
+    for _ in range(n - 2):
+        array.remove(index=randint(0, array.size() - 2))
 
 
 if __name__ == '__main__':
 
     for n in [10, 100, 1000, 10000, 100000, 1000000]:
         array = MatrixArray()
-        for _ in range(100):
+        for _ in range(n):
             array.add(1)
-        check_insert(array=array, n=n)
+        check_remove(array=array, n=n)

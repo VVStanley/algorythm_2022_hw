@@ -1,0 +1,11 @@
+func_name|N|A|time
+check_remove|10||0.0000345810 sec
+check_remove|100||0.0010492450 sec
+check_remove|1000||0.0752057550 sec
+check_remove|10000||7.6487622770 sec
+check_remove|100000||697.4644786390 sec
+check_remove|10||0.0000391600 sec
+check_remove|100||0.0007854050 sec
+check_remove|1000||0.0316552390 sec
+check_remove|10000||2.6915967390 sec
+check_remove|100000||256.2977787100 sec
