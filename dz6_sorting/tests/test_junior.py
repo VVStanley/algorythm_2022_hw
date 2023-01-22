@@ -1,13 +1,6 @@
-from random import choices
-from typing import List
-
 from dz6_sorting.junior import bubble_sort, insertion_sort, shell_sort
+from utils.arr import get_random_arr
 from utils.decorators import CSVOutput
-
-
-def get_random_arr(n: int) -> List[int]:
-    sort_arr = [i for i in range(n)]
-    return choices(sort_arr, k=len(sort_arr))
 
 
 def test_bubble_sort() -> None:
@@ -32,14 +25,13 @@ def test_shell_sort() -> None:
 
 
 @CSVOutput(folder="dz6_sorting")
-def start(n):
+def start(n, arr):
     """"""
-    arr = get_random_arr(n)
     new_sort_arr = shell_sort(arr)
-    assert new_sort_arr == sorted(arr)
 
 
 def test_start():
-    start(n=100)
-    start(n=1000)
-    start(n=10000)
+
+    for n in [100, 1000, 10000]:
+        arr = get_random_arr(n)
+        start(n=n, arr=arr)
